@@ -1,0 +1,224 @@
+.inicio {
+
+    background: rgb(72,132,120);
+    background: -moz-linear-gradient(90deg, rgba(72,132,120,0.70) 100%, rgba(255,249,239,1) 50%);
+    background: -webkit-linear-gradient(90deg, rgba(72,132,120,0.70) 100%, rgba(255,249,239,1) 50%);
+    background: linear-gradient(90deg, rgba(72,132,120,0.70) 100%, rgba(255,249,239,1) 50%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#488478",endColorstr="#fff9ef",GradientType=1);
+    height: 800px;
+    border-radius: 0 0 80px 80px;
+    padding-top: 80px;
+
+    .carrusel {
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+        .carrusel__titulo {
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            top: 10%;
+            z-index: 1000;
+            font-size: 2rem;
+            opacity: 0; /* Inicia invisible */
+            animation-name: fadeIn; /* Nombre de la animación */
+            animation-duration: 1s; /* Duración de la animación */
+            animation-fill-mode: forwards;
+        }
+
+        .carrusel__titulo.delayed-animation {
+            animation-delay: 1s; /* Retraso de la animación */
+        }
+
+        .carrusel--style {
+            width: 80%;
+            margin: 25% 0 5% 0;
+            opacity: 0; /* Inicia invisible */
+            animation-name: fadeIn; /* Utiliza la misma animación */
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+
+            img {
+                border-radius: 0 100px 0 100px;
+            }
+        }
+
+        .carrusel--style.delayed-animation {
+            animation-delay: 1s; /* Ajusta el retraso según sea necesario */
+        }
+
+        
+
+        @media (max-width: 769px) {
+            padding-top: 50px;
+
+            .carrusel--style {
+                width: 90%;
+                margin: 50% 0 5% 0;
+
+                img {
+                    border-radius: 0 50px 0 50px;
+                }
+            }
+        }
+
+    }
+    
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to { 
+        opacity: 1; 
+    }
+}
+
+.carrusel__titulo.delayed-animation {
+    animation-delay: 1s;
+}
+
+@media (max-width: 768px) {
+    .inicio {
+        height: auto;
+        padding-top: 60px
+    }
+}
+
+.realDeMinas {
+    margin-top: 400px;
+    height: 800px;
+
+    &__titulo {
+
+        h2 {
+            color: #936739;
+        }
+        
+    }
+
+    &__contenido {
+        .seleccionar {
+            select {
+                width: 20%;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .seleccionar {
+                select {
+                    width: 100%;
+                }
+            }
+        }
+
+    }
+
+    &__cards {
+        
+        margin: 0 0 200px 0;
+        
+        .card {
+            width: 75%;
+            margin-bottom: 1rem;
+            padding: 1rem;
+
+            @media (max-width: 768px) {
+                width: 90%;
+
+                .row {
+                    flex-direction: column;
+                }
+    
+                .card--imagen {
+                    margin-bottom: 1rem; // Espacio entre imagen y texto en móviles
+                }
+    
+                .card-body,
+                .card-footer {
+                    text-align: center;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                }
+            }
+            
+            
+            .card--imagen {
+                cursor: pointer;
+            }
+        }
+    }
+
+}
+
+.acercaNosotros {
+    margin-top: 20%;
+    height: 400px;
+
+    &__titulo {
+        h3 {
+            color: #488478;
+        }
+    }
+}
+
+@media (max-width: 299px) {
+
+    .acercaNosotros {
+        margin-top: 950px;
+        height: 900px;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 399px) {
+    .acercaNosotros {
+        margin-top: 700px;
+        height: 750px;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 768px) {
+    .acercaNosotros {
+        margin-top: 550px;
+        height: 600px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    .acercaNosotros {
+        margin-top: 300px;
+        height: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .realDeMinas {
+        margin-top: 70px;
+        height: 500px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    .realDeMinas {
+        margin-top: 70px;
+        height: 500px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1499px) {
+    .realDeMinas {
+        margin-top: 350px;
+        height: 500px;
+    }
+}
+
+@media (min-width: 1500px) and (max-width: 2000px) {
+    .realDeMinas {
+        margin-top: 35%;
+        height: 500px;
+    }
+}
+

@@ -1,0 +1,54 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+
+.carrusel {
+
+    .carrusel__titulo {
+
+        h1 {
+            font-family: "Mulish", sans-serif;
+            font-weight: 700;
+        }
+        
+    }
+}
+
+.realDeMinas {
+
+    &__titulo {
+
+        h2 {
+            font-family: "Mulish", sans-serif;
+            font-weight: 700;
+        }
+    }
+
+    &__cards {
+        font-family: "Mulish", sans-serif;
+    }
+}
+
+.acercaNosotros {
+
+    &__titulo {
+        h3 {
+            font-family:"Mulish", sans-serif;
+            font-weight: 700;
+        }
+    }
+
+    &__contenido {
+
+        .blockquote {
+            p {
+                font-family: "Mulish", sans-serif;
+            }
+        }
+
+        .blockquote-footer {
+            font-family: "Mulish", sans-serif;
+        }
+        
+    }
+}
