@@ -18,21 +18,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
     let selectCard = document.getElementById('selectCard');
 
     selectCard.addEventListener('change', () => {
-        console.log('Cambio detectado');
 
         let card1 = document.getElementById('card1');
         let card2 = document.getElementById('card2');
 
         if (selectCard.value === 'Casa tipo 2') {
-
-            console.log('Seleccionada Casa tipo 2');
-
             card1.classList.add('d-none');
             card2.classList.remove('d-none');
         } else if (selectCard.value === 'Casa tipo 1') {
-
-            console.log('Seleccionada Casa tipo 1');
-
             card2.classList.add('d-none');
             card1.classList.remove('d-none');
         }
@@ -42,53 +35,73 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
 
-    // Boton de pago y alerta - Visualización
-    let inputs = document.querySelectorAll('.modal-body input');
-    let btnStripe = document.getElementById('btnStripe');
-    let alertStripe = document.getElementById('alertStripe');
+    // Boton de pago y alerta - Visualización de la casa tipo 1
+    let inputs_tipo1 = document.querySelectorAll('#staticBackdrop .modal-body input');
+    let btnStripe_tipo1 = document.getElementById('btnStripe');
+    let alertStripe_tipo1 = document.getElementById('alertStripe');
 
-    inputs.forEach(input => {
-        input.addEventListener('input', () => {
+    let inputs_tipo2 = document.querySelectorAll('#modalReserva2 .modal-body input');
+    let btnStripe_tipo2 = document.getElementById('btnStripe_tipo2');
+    let alertStripe_tipo2 = document.getElementById('alertStripe_tipo2');
 
-            let allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
+    function checkInputs(inputs, btnStripe, alertStripe) {
+        let allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
 
-            // Si todos los campos están llenos, muestra el botón de Stripe
-            if (allFilled) {
-                btnStripe.classList.remove('d-none');
-                alertStripe.classList.remove('d-none');
+        if (allFilled) {
+            btnStripe.classList.remove('d-none');
+            alertStripe.classList.remove('d-none');
 
-                setTimeout(() => {
-                    alertStripe.classList.add('d-none');
-                }, 4000);
-
-            } else {
-                btnStripe.classList.add('d-none');
+            setTimeout(() => {
                 alertStripe.classList.add('d-none');
-            }
-        });
+            }, 4000);
+        } else {
+            btnStripe.classList.add('d-none');
+            alertStripe.classList.add('d-none');
+        }
+    }
+
+    inputs_tipo1.forEach(input => {
+        input.addEventListener('input', () => checkInputs(inputs_tipo1, btnStripe_tipo1, alertStripe_tipo1));
+    });
+
+    inputs_tipo2.forEach(input => {
+        input.addEventListener('input', () => checkInputs(inputs_tipo2, btnStripe_tipo2, alertStripe_tipo2));
     });
 
     (() => {
         'use strict'
-      
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+       
         const forms = document.querySelectorAll('.needs-validation')
       
-        // Loop over them and prevent submission
         Array.from(forms).forEach(form => {
 
-          form.addEventListener('submit', event => {
+            form.addEventListener('submit', event => {
 
-            if (!form.checkValidity()) {
-              event.preventDefault();
-              event.stopPropagation();
-            }
-      
-            form.classList.add('was-validated');
+                if (!form.checkValidity()) {
 
-          }, false);
-          
+                    event.preventDefault();
+                    event.stopPropagation();
+
+                } else {
+                    event.preventDefault();
+    
+                    Swal.fire({
+                        title: '¡Datos enviados correctamente!',
+                        text: 'Su información ha sido enviada. La página se recargará ahora.',
+                        icon: 'success',
+                        timer: 3000,
+                        timerProgressBar: true,
+                        didClose: () => {
+                            location.reload();
+                        }
+                    });
+                }
+
+                form.classList.add('was-validated');
+                
+            }, false);
         });
+
     })()
 
 });

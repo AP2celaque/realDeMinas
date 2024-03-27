@@ -205,6 +205,7 @@
                     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
 
                         <div class="modal-content">
+
                             <div class="modal-header px-4">
                                 <h1 class="modal-title fs-3 fw-bold" id="staticBackdropLabel">¡Reserve ahora!</h1>
 
@@ -246,7 +247,7 @@
                                 <div class="col-md-6 my-3">
 
                                     <label for="validationCustom03" class="form-label">Correo electrónico</label>
-                                    <input type="email" class="form-control" id="validationCustom03" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" placeholder="alguien@algo.com" required>
+                                    <input type="email" class="form-control" id="validationCustom03" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" placeholder="Ejemplo: alguien@algo.com" required>
 
                                     <div class="valid-feedback">
                                         ¡Correcto!
@@ -261,7 +262,7 @@
                                 <div class="col-md-6 my-3">
 
                                     <label for="validationCustom04" class="form-label">Número de teléfono</label>
-                                    <input type="tel" class="form-control" id="validationCustom04" pattern="^(\+\d{3}\s)?\d{4}-\d{4}$" placeholder="+504 9999-9999" required>
+                                    <input type="tel" class="form-control" id="validationCustom04" pattern="^(\+\d{3}\s)?\d{4}-\d{4}$" placeholder="Ejemplo: +504 9999-9999" required>
 
                                     <div class="valid-feedback">
                                         ¡Correcto!
@@ -340,7 +341,7 @@
                                 <!-- stripe -->
 
                                 <div id="alertStripe" class="alert alert-info d-none text-center fw-bold" role="alert">
-                                    ¡Todos los campos están llenos! Ahora puedes proceder a la reserva.
+                                    ¡Todos los campos están llenos! Ahora puedes proceder al pago de la reserva.
                                 </div>
 
                                 <div class="col-md-6 my-3 d-flex justify-content-center d-none" id="btnStripe">
@@ -438,33 +439,162 @@
 
                 <div class="modal fade" id="modalReserva2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
 
-                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
                         <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Botón de reserva</h1>
+
+                            <div class="modal-header px-4">
+                                <h1 class="modal-title fs-3 fw-bold" id="staticBackdropLabel_tipo2">¡Reserve ahora!</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
 
-                            <div class="modal-body d-flex justify-content-center">
+                            <form class="modal-body row g-2 needs-validation d-flex justify-content-center px-4" novalidate>
+
+                                <div class="col-md-6 my-3">
+
+                                    <label for="validationCustom09" class="form-label">Nombres</label>
+                                    <input type="text" class="form-control" id="validationCustom09" pattern="^[a-zA-Z]+(?:\s[a-zA-Z]+)+$" placeholder="Ejemplo: Joe Enrique" required>
+
+                                    <div class="valid-feedback">
+                                        ¡Correcto!
+                                    </div>
+
+                                    <div class="invalid-feedback">
+                                        Por favor, ingrese sus dos nombres separados por un espacio.
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6 my-3">
+
+                                    <label for="validationCustom10" class="form-label">Apellidos</label>
+                                    <input type="text" class="form-control" id="validationCustom10" pattern="^[a-zA-Z]+(?:\s[a-zA-Z]+)+$" placeholder="Ejemplo: Rodriguez Mendoza" required>
+
+                                    <div class="valid-feedback">
+                                        ¡Correcto!
+                                    </div>
+
+                                    <div class="invalid-feedback">
+                                        Por favor, ingrese sus dos apellidos separados por un espacio.
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6 my-3">
+
+                                    <label for="validationCustom11" class="form-label">Correo electrónico</label>
+                                    <input type="email" class="form-control" id="validationCustom11" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" placeholder="Ejemplo: alguien@algo.com" required>
+
+                                    <div class="valid-feedback">
+                                        ¡Correcto!
+                                    </div>
+
+                                    <div class="invalid-feedback">
+                                        Por favor, ingrese un correo electrónico válido.
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6 my-3">
+
+                                    <label for="validationCustom12" class="form-label">Número de teléfono</label>
+                                    <input type="tel" class="form-control" id="validationCustom12" pattern="^(\+\d{3}\s)?\d{4}-\d{4}$" placeholder="Ejemplo: +504 9999-9999" required>
+
+                                    <div class="valid-feedback">
+                                        ¡Correcto!
+                                    </div>
+
+                                    <div class="invalid-feedback">
+                                        Por favor, ingrese un número de teléfono válido.
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 my-3">
+    
+                                    <label for="validationCustom13" class="form-label">Subir foto de ID</label>
+                                    <input type="file" class="form-control" id="validationCustom13" accept="image/*" required>
+    
+                                    <div class="valid-feedback">
+                                        ¡Correcto!
+                                    </div>
+    
+                                    <div class="invalid-feedback">
+                                        Por favor, suba una foto de su ID.
+                                    </div>
+    
+                                </div>
+                                
+                                <div class="col-md-6 my-3">
+    
+                                    <label for="validationCustom14" class="form-label">Subir foto de RTN</label>
+                                    <input type="file" class="form-control" id="validationCustom14" accept="image/*" required>
+    
+                                    <div class="valid-feedback">
+                                        ¡Correcto!
+                                    </div>
+    
+                                    <div class="invalid-feedback">
+                                        Por favor, suba una foto de su RTN.
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 my-3">
+                                    <label for="validationCustom15" class="form-label">
+                                        Recibo de servicios públicos, puede ser de agua, luz o internet.
+                                    </label>
+
+                                    <input type="file" class="form-control" id="validationCustom15" accept="image/*" required>
+                                    
+                                    <div class="valid-feedback">
+                                        ¡Correcto!
+                                    </div>
+
+                                    <div class="invalid-feedback">
+                                        Por favor, suba una foto de un recibo de servicios públicos.
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 my-3">
+                                    
+                                    <label for="validationCustom16" class="form-label">
+                                        Llene el siguiente <a href="https://agax.apps-celaque.net/celaquesoft/formulario_cumplimiento/#" class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank">formulario</a> y luego suba el pdf del mismo aquí:
+                                        <br>
+                                    </label>
+
+                                    <input type="file" class="form-control" id="validationCustom16" accept="image/*" required>
+                                    
+                                    <div class="valid-feedback">
+                                        ¡Correcto!
+                                    </div>
+
+                                    <div class="invalid-feedback">
+                                        Por favor, suba el pdf del formulario de cumplimiento.
+                                    </div>
+                                </div>
 
                                 <!-- stripe -->
 
-                                <script async
-                                    src="https://js.stripe.com/v3/buy-button.js">
-                                </script>
+                                <div id="alertStripe_tipo2" class="alert alert-info d-none text-center fw-bold" role="alert">
+                                    ¡Todos los campos están llenos! Ahora puedes proceder al pago de la reserva.
+                                </div>
 
-                                <stripe-buy-button
-                                    buy-button-id="buy_btn_1OwtFzK95e7rB4Pms0JXAS7c"
-                                    publishable-key="pk_test_51Owsk8K95e7rB4PmHuNtxydFjkkxvM7cAINHIIvmhtWqdsXRlPg9nlwPXge3yDYNqJXxv3dbX0BiBG3kAngEi8SY00Oy2WkdCf"
-                                >
-                                </stripe-buy-button>
-                            </div>
+                                <div class="col-md-6 my-3 d-flex justify-content-center d-none" id="btnStripe_tipo2">
+    
+                                    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                
-                                <!-- <button type="button" class="btn btn-outline-primary">Hecho</button> -->
-                            </div>
+                                    <stripe-buy-button
+                                        buy-button-id="buy_btn_1OwtFzK95e7rB4Pms0JXAS7c"
+                                        publishable-key="pk_test_51Owsk8K95e7rB4PmHuNtxydFjkkxvM7cAINHIIvmhtWqdsXRlPg9nlwPXge3yDYNqJXxv3dbX0BiBG3kAngEi8SY00Oy2WkdCf"
+                                    >
+                                    
+                                    </stripe-buy-button>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                    <button type="submit" class="btn text-white" style="background-color: #042523;">Enviar información</button>
+                                </div>
+
+                            </form>
                         </div>
                     </div>
 
