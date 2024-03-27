@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     
                     Swal.fire({
                         title: '¡Datos enviados correctamente!',
-                        text: 'Su información ha sido enviada. La página se recargará ahora.',
+                        text: 'Su información ha sido enviada. un agente se contactará contigo.',
                         icon: 'success',
                         timer: 3000,
                         timerProgressBar: true,
