@@ -1,12 +1,13 @@
 .inicio {
 
-    background: rgb(72,132,120);
-    background: -moz-linear-gradient(90deg, rgba(72,132,120,0.70) 100%, rgba(255,249,239,1) 50%);
-    background: -webkit-linear-gradient(90deg, rgba(72,132,120,0.70) 100%, rgba(255,249,239,1) 50%);
-    background: linear-gradient(90deg, rgba(72,132,120,0.70) 100%, rgba(255,249,239,1) 50%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#488478",endColorstr="#fff9ef",GradientType=1);
+    background: #042523;
+    // background: rgb(72,132,120);
+    // background: -moz-linear-gradient(90deg, rgba(72,132,120,0.70) 100%, rgba(255,249,239,1) 50%);
+    // background: -webkit-linear-gradient(90deg, rgba(72,132,120,0.70) 100%, rgba(255,249,239,1) 50%);
+    // background: linear-gradient(90deg, rgba(72,132,120,0.70) 100%, rgba(255,249,239,1) 50%);
+    // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#488478",endColorstr="#fff9ef",GradientType=1);
     height: 800px;
-    border-radius: 0 0 80px 80px;
+    border-radius: 0 0 0px 0px;
     padding-top: 80px;
 
     .carrusel {
@@ -118,44 +119,57 @@
 
     &__cards {
         
-        margin: 0 0 200px 0;
-        
-        .card {
+        margin: 0 0 250px 0;
+
+        .tarjeta2,
+        .tarjeta1 {
+
+            display: flex;
             width: 75%;
-            margin-bottom: 1rem;
-            padding: 1rem;
+            justify-content: space-between;
 
-            @media (max-width: 768px) {
-                width: 90%;
-
-                .row {
-                    flex-direction: column;
-                }
-    
-                .card--imagen {
-                    margin-bottom: 1rem; // Espacio entre imagen y texto en móviles
-                }
-    
-                .card-body,
-                .card-footer {
-                    text-align: center;
-                    display: flex;
-                    justify-content: space-between;
-                    flex-wrap: wrap;
-                }
+            .card--imagen {
+                margin-bottom: 1rem; // Espacio entre imagen y texto en móviles
             }
-            
-            
+
             .card--imagen {
                 cursor: pointer;
             }
         }
+
+        
+        // .card {
+        //     width: 75%;
+        //     margin-bottom: 1rem;
+        //     padding: 1rem;
+
+        //     @media (max-width: 768px) {
+        //         width: 90%;
+
+        //         .row {
+        //             flex-direction: column;
+        //         }
+    
+                
+    
+        //         .card-body,
+        //         .card-footer {
+        //             text-align: center;
+        //             display: flex;
+        //             justify-content: space-between;
+        //             flex-wrap: wrap;
+        //         }
+        //     }
+            
+            
+            
+        // }
     }
 
 }
 
 .acercaNosotros {
-    margin-top: 20%;
+    margin-top: 25%;
     height: 400px;
 
     &__titulo {
@@ -168,28 +182,28 @@
 @media (max-width: 299px) {
 
     .acercaNosotros {
-        margin-top: 950px;
+        margin-top: 550px;
         height: 900px;
     }
 }
 
 @media (min-width: 300px) and (max-width: 399px) {
     .acercaNosotros {
-        margin-top: 700px;
+        margin-top: 600px;
         height: 750px;
     }
 }
 
 @media (min-width: 400px) and (max-width: 768px) {
     .acercaNosotros {
-        margin-top: 550px;
+        margin-top: 650px;
         height: 600px;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1199.98px) {
     .acercaNosotros {
-        margin-top: 300px;
+        margin-top: 400px;
         height: 600px;
     }
 }
